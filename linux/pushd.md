@@ -15,3 +15,27 @@
 * `dirs -c` 清空stack, 当前目录不受影响
 
 默认清空下，当前目录作为栈顶（即stack 有一个元素），此时不能使用 `popd`.
+
+### ubuntu 终端路径太长
+
+看着不爽，修改 ~/.bashrc
+
+将*~/.bashrc* 中*PS1* 的值修改，比如我的是：
+
+```
+if [ "$color_prompt" = yes ]; then
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+else
+PS1='${debian_chroot:+($debian_chroot)}\u:\W\$ '
+fi
+```
+
+```
+case "$TERM" in
+xterm*|rxvt*)
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \W\a\]$PS1"
+```
+
+只需将其中的小写*\w* 改为大写*\W*  (上面的已经改好了)
+
+其他： \u 显示username，\h 显示hostname
