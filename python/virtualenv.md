@@ -13,7 +13,15 @@ deactivate   # exit the virtual environment
 
 ## pip
 
-usually use the 3 commands:
+
+[install pip](https://pip.pypa.io/en/latest/installing.html)
+
+Apply to linux, os x and windows (e.g., git bash).
+
+In windows, we need to add the install-dir(C:\[pythondir]\scipts) to the system path.
+
+
+Usually use the 3 commands:
 
 1. `pip install <package-name>`
 2. `pip freeze > requirements.txt`    # export the current state of the environment packages
