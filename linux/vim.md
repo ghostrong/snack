@@ -17,3 +17,6 @@ sudo apt-get update
 sudo apt-get install vim
 ```
 
+### Vim config
+
+[vimconfig](https://github.com/ghostrong/vimconfig)
