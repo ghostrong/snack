@@ -1,1 +1,3 @@
+*.pyc
 temp/
+codebox/qq_group_crawler/output/
